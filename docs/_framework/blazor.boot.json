@@ -1,9 +1,9 @@
 {
   "mainAssemblyName": "DagaDatatable",
   "resources": {
-    "hash": "sha256-I5/GhMhNDX704ybw/Rv7yo3XceORQY6yiyMSIyXAazk=",
+    "hash": "sha256-l6OHeXgatNFnNsYTrsABCLfpGEQCZxscSR4P8mFhJ6Q=",
     "fingerprinting": {
-      "DagaDatatable.g0dh721ofl.wasm": "DagaDatatable.wasm",
+      "DagaDatatable.zph3nldy1t.wasm": "DagaDatatable.wasm",
       "Microsoft.AspNetCore.Components.g2uf8wsg0m.wasm": "Microsoft.AspNetCore.Components.wasm",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "Microsoft.AspNetCore.Components.Web.wasm",
       "Microsoft.AspNetCore.Components.WebAssembly.0prlth0hc4.wasm": "Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -64,7 +64,7 @@
       "System.Runtime.InteropServices.JavaScript.f4ln4hfftw.wasm": "sha256-r+LQmgoVdHgFKWJvUNAR7HQZAtSw+xvBIQ6siSPsBNM="
     },
     "assembly": {
-      "DagaDatatable.g0dh721ofl.wasm": "sha256-4OQyRncAvtP5SS5fv2+hiUSWup1lUU/ngGPxIH7zT48=",
+      "DagaDatatable.zph3nldy1t.wasm": "sha256-d7f8qJ93Bnc7IVTDaiE3eW/lOjG1KpSlAUXb4l3EWdo=",
       "Microsoft.AspNetCore.Components.g2uf8wsg0m.wasm": "sha256-CHLBdZ8lmGjukXC04ARQkEazSu2q0ffGzI959NNh0+4=",
       "Microsoft.AspNetCore.Components.Web.5fnpqqr84r.wasm": "sha256-0fT5DLMa1voamFmX5/f/aY8oct7a5CLEOHu2Tdn6oCA=",
       "Microsoft.AspNetCore.Components.WebAssembly.0prlth0hc4.wasm": "sha256-jB/Gf1i7eXuQqAzqY/ZONe+hrW3x94pYZlL+G0Cv7Co=",
