@@ -1,4 +1,4 @@
-@echo
+@echo off
 
 if not exist "docs" (
 	mkdir docs
