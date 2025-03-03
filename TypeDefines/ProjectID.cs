@@ -1,4 +1,6 @@
-public readonly struct ProjectID
+﻿namespace DagaDatatable.TypeDefines
+{
+    public readonly struct ProjectID
     {
         private ulong Value { get; }
 
@@ -12,3 +14,4 @@ public readonly struct ProjectID
 
         public override string ToString() => Value.ToString();
     }
+}
