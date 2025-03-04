@@ -9,6 +9,4 @@ if not exist "docs\.nojekyll" (
 )
 
 dotnet publish -c Release -o release
-xcopy release\wwwroot docs /E
-
-pause
+xcopy release\wwwroot docs /E /Y

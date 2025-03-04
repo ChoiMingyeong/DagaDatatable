@@ -6,6 +6,19 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+	<ItemGroup>
+		<Compile Remove="docs\**" />
+		<Compile Remove="release\**" />
+		<Content Remove="docs\**" />
+		<Content Remove="release\**" />
+		<EmbeddedResource Remove="docs\**" />
+		<EmbeddedResource Remove="release\**" />
+		<None Remove="publish.bat" />
+		<None Remove=".gitignore" />
+		<None Remove=".gitattributes" />
+		<None Remove="README.md" />
+	</ItemGroup>
+	
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="9.0.2" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.2" PrivateAssets="all" />
