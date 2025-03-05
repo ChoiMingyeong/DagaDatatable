@@ -1,0 +1,70 @@
+﻿@page "/signin"
+@attribute [AllowAnonymous]
+@implements IDisposable
+
+<h3>SignIn</h3>
+
+<EditForm EditContext="editContext" OnValidSubmit="OnSigninButtonClicked" OnInvalidSubmit="ShowError">
+    <label>Email</label>
+    <div>
+        <InputText @bind-Value="signinInfo!.Email" />
+        <ValidationMessage For="@(() => signinInfo.Email)" />
+    </div>
+    <label>Password</label>
+    <div>
+        <InputText @bind-Value="signinInfo.Password" type="@passwordInputType" />
+        <ValidationMessage For="@(() => signinInfo.Password)" />
+    </div>
+    <button class="btn-outline-primary" type="submit" disabled=@isError>
+        SignIn
+    </button>
+    <DataAnnotationsValidator />
+</EditForm>
+
+@if (isSigninFailed)
+{
+    <label class="alert alert-danger">아이디 혹은 비밀번호를 다시 확인해주세요.</label>
+}
+
+@code {
+    SigninInfo signinInfo = new();
+    bool isError = false;
+    EditContext? editContext = null;
+    string passwordInputType = "password";
+    bool isSigninFailed = false;
+
+    protected override void OnInitialized()
+    {
+        editContext = new(signinInfo);
+        editContext.OnFieldChanged += HandleFieldChanged;
+    }
+
+    private async void HandleFieldChanged(object? sender, FieldChangedEventArgs e)
+    {
+        isError = !editContext!.Validate();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    public void Dispose()
+    {
+        editContext!.OnFieldChanged -= HandleFieldChanged;
+    }
+
+    async Task OnSigninButtonClicked()
+    {
+        if (null == await AuthService.MarkUserAsAuthenticated(signinInfo))
+        {
+            isSigninFailed = true;
+            await InvokeAsync(StateHasChanged);
+        }
+        else
+        {
+            Navigation.NavigateTo("", forceLoad: true);
+        }
+    }
+
+    protected void ShowError()
+    {
+        isError = true;
+    }
+}

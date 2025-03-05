@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35728.132 d17.12
+VisualStudioVersion = 17.12.35728.132
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagaDatatable", "DagaDatatable.csproj", "{BEFE2D26-C3FA-4D6E-A798-21A011AF6B7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DagaCommon", "..\DagaCommon\DagaCommon.csproj", "{641580BE-FA12-491F-A345-797157F8F81F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BEFE2D26-C3FA-4D6E-A798-21A011AF6B7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BEFE2D26-C3FA-4D6E-A798-21A011AF6B7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BEFE2D26-C3FA-4D6E-A798-21A011AF6B7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{641580BE-FA12-491F-A345-797157F8F81F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{641580BE-FA12-491F-A345-797157F8F81F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{641580BE-FA12-491F-A345-797157F8F81F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{641580BE-FA12-491F-A345-797157F8F81F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
