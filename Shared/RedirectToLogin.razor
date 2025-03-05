@@ -1,0 +1,12 @@
+﻿@code {
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthService.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        if (null == user || null == user.Identity || !user.Identity.IsAuthenticated)
+        {
+            Navigation.NavigateTo("signin", forceLoad: true);
+        }
+    }
+}
